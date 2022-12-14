@@ -96,7 +96,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
       onClose={handleCloseMenu}
       sx={{ mt: 2 }}
     >
-      <NotificationItem icon={<Icon>email</Icon>} title="Nuevos mensajes" />
+ 
     </Menu>
   );
 
@@ -125,9 +125,6 @@ function DashboardNavbar({ absolute, light, isMini }) {
         </MDBox>
         {isMini ? null : (
           <MDBox sx={(theme) => navbarRow(theme, { isMini })}>
-            <MDBox pr={1}>
-              <MDInput label="Search here" />
-            </MDBox>
             <MDBox color={light ? "white" : "inherit"}>
               <IconButton
                 size="small"
@@ -137,11 +134,12 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 aria-controls="notification-menu"
                 aria-haspopup="true"
                 variant="contained"
-                onClick={handleOpenMenu}
+                onClick={handleOpenMenu}// cambiar de ventana a la de agregar
               >
-                <Icon sx={iconsStyle}>notifications</Icon>
+                Agregar
+                <Icon sx={{ fontSize: 30 }}>add_circle</Icon>
               </IconButton>
-              {renderMenu()}
+               
             </MDBox>
           </MDBox>
         )}

@@ -45,8 +45,17 @@ export default function data(nombre) {
       </MDTypography>
       <MDTypography variant="caption">{description}</MDTypography>
     </MDBox>
-  );
 
+  );
+  
+  const Botones= ({ title2, description2 }) => (
+    <MDBox lineHeight={1} textAlign="center">
+      <MDTypography component="a" href="#" variant="caption"   onClick={() => {
+    alert('cambiar a editar');
+  }} >{title2}</MDTypography>/
+      <MDTypography component="a" href="#" variant="caption">{description2}</MDTypography>
+    </MDBox>
+  );
   return {
     columns: [
       { Header: "nombre", accessor: "author", width: "35%", align: "left" },
@@ -77,11 +86,8 @@ export default function data(nombre) {
             23/12/22
           </MDTypography>
         ),
-        action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Editar
-          </MDTypography>
-        ),
+        action: <Botones title2="Editar" description2="Borrar" />,
+        
       },
       {
         author: <Author image={team2} clasificacion="Otucomes" Descripcion="An ability to lead, manage and undertake projects.
