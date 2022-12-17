@@ -51,6 +51,9 @@ MDButton.defaultProps = {
   color: "white",
   circular: false,
   iconOnly: false,
+  
+  
+  
 };
 
 // Typechecking props for the MDButton

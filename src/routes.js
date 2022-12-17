@@ -44,6 +44,7 @@ import Billing from "layouts/billing";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import Overview from "layouts/profile";
 
 const routes = [
   
@@ -70,6 +71,15 @@ const routes = [
     icon: <Icon fontSize="small">notifications</Icon>,
     route: "/notifications",
     component: <Notifications />,
+  },
+
+  {
+    type: "collapse",
+    name: "Añadir Rúbrica",
+    key: "arubrica",
+    icon: <Icon fontSize="small">notifications</Icon>,
+    route: "/profile",
+    component: <Overview />,
   },
 
 ];
